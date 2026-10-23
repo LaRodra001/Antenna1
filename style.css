@@ -1,0 +1,51 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+:root {
+    --antennaDotWidth: 25vh;
+    --antennaDotHeight: 25vh;
+    --antennaCircleWidth: 75vh;
+    --antennaCircleHeight: 75vh;
+}
+
+.antenaDot {
+    width: var(--antennaDotWidth);
+    height: var(--antennaDotHeight);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+
+    transition: transform 0.2s ease, background-color 1.2s ease;
+}
+
+.antenaDot:hover {
+    transform: scale(1.2);
+    background-color: rgb(94, 94, 255);
+    
+}
+
+
+.antennaCircle {
+    width: var(--antennaCircleWidth);
+    height: var(--antennaCircleHeight);
+    border: 2px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease;
+}
+
+.antennaCircle:hover {
+    transform: scale(1.005);
+}
