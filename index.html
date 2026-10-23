@@ -5,26 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Antenna 1</title>
+    <title>Antenna 1 | Antenna network</title>
 </head>
 
 <body>
-    <h2>Antenna 1</h2>
-    <div class="antenna">
-        <div class="antennaCircle">
-            <div class="antenaDot"></div>
-        </div>
-    </div>
-    <div class="info">
-        <div class="StatusContainer">
-            <h3>Status: <span id="StatusText">OFFLINE</span></h3>
-            <label class="Switch">
-                <input type="checkbox" id="StatusSwitch">
-                <span class="Slider"></span>
-            </label>
-        </div>
-        <h3>Requests:</h3>
-    </div>
+    <main class="dashboard">
+        <header class="pageHeader">
+            <p class="eyebrow">DISTRIBUTED POSITIONING NETWORK</p>
+            <h1 id="antennaName">Antenna 1</h1>
+            <p class="antennaId">ID <span id="antennaId">Antenna1</span></p>
+        </header>
+        <section class="antenna" aria-label="Antenna visualization">
+            <div class="antennaCircle"><div class="antenaDot"></div></div>
+        </section>
+        <section class="info" aria-label="Antenna details">
+            <div class="StatusContainer">
+                <div>
+                    <p class="fieldLabel">BACKEND STATE</p>
+                    <p class="statusValue"><span class="statusMark" id="StatusMark"></span><span id="StatusText">CONNECTING</span></p>
+                </div>
+                <label class="Switch" title="Change backend power state">
+                    <input type="checkbox" id="StatusSwitch" aria-label="Set antenna online or offline" disabled>
+                    <span class="Slider"></span>
+                </label>
+            </div>
+            <div class="metrics">
+                <div><p class="fieldLabel">POSITION</p><p class="metricValue" id="PositionText">--</p></div>
+                <div><p class="fieldLabel">POSITION REQUESTS</p><p class="metricValue" id="RequestsText">--</p></div>
+            </div>
+            <p class="message" id="MessageText" role="status" aria-live="polite"></p>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
