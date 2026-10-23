@@ -49,3 +49,56 @@ body {
 .antennaCircle:hover {
     transform: scale(1.005);
 }
+
+.StatusContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+}
+
+.Switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.Slider {
+    position: absolute;
+    inset: 0;
+    background-color: #555;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.Slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.Switch input:checked + .Slider {
+    background-color: #00c853;
+}
+
+.Switch input:checked + .Slider::before {
+    transform: translateX(22px);
+}
+
+.Switch input:focus-visible + .Slider {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}

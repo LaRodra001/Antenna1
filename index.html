@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Antenna 1</title>
 </head>
+
 <body>
     <h2>Antenna 1</h2>
     <div class="antenna">
@@ -14,8 +16,17 @@
         </div>
     </div>
     <div class="info">
-        <h3>Status: Online</h3>
+        <div class="StatusContainer">
+            <h3>Status: <span id="StatusText">OFFLINE</span></h3>
+            <label class="Switch">
+                <input type="checkbox" id="StatusSwitch">
+                <span class="Slider"></span>
+            </label>
+        </div>
         <h3>Requests:</h3>
     </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
